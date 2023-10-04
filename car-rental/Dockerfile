@@ -114,7 +114,7 @@ RUN  sed -i "/^DB_USERNAME=/ s/=.*$/=$RDS_MASTER_USERNAME/" .env
 RUN  sed -i "/^DB_PASSWORD=/ s/=.*$/=$RDS_DB_PASSWORD/" .env
 
 # Copy the file, AppServiceProvider.php from the host file system into the container at the path app/Providers/AppServiceProvider.php
-COPY AppServiceProvider.php app/Providers/AppServiceProvider.php
+#COPY AppServiceProvider.php app/Providers/AppServiceProvider.php
 
 # Expose the default Apache and MySQL ports
 EXPOSE 80 3306
